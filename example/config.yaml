@@ -1,0 +1,16 @@
+name: Example app
+version: ea14b22
+slug: example
+description: Example app
+url: https://github.com/sairon-playground/app-example
+arch:
+- aarch64
+- amd64
+init: false
+map:
+- share:rw
+options:
+  message: Hello world...
+schema:
+  message: str?
+image: ghcr.io/sairon-playground/app-example
