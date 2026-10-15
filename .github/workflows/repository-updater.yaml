@@ -1,0 +1,16 @@
+---
+# yamllint disable rule:comments rule:line-length rule:truthy
+name: Repository updater
+
+on:
+  repository_dispatch:
+    types: ["update"]
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    uses: hassio-addons/workflows/.github/workflows/repository-updater.yaml@e0c532a7b0fb264b3ff0c718c2c0308a0c8c1390 # v4.0.0
+    secrets:
+      UPDATER_TOKEN: ${{ secrets.UPDATER_TOKEN }}

@@ -1,0 +1,7 @@
+---
+channel: edge
+apps:
+  example:
+    repository: sairon-playground/app-example
+    target: example
+    image: ghcr.io/sairon-playground/app-example
